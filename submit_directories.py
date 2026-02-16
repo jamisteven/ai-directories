@@ -31,7 +31,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PRODUCT = {
     "url": "https://YOUR_PRODUCT_URL",
     "app_url": "https://YOUR_APP_URL",
-    "github": "https://github.com/YOUR_GITHUB_REPO",
+    "github": "",
     "name": "YOUR_PRODUCT_NAME",
     "tagline": "YOUR_PRODUCT_TAGLINE",
     "email": "YOUR_EMAIL",
@@ -40,8 +40,8 @@ PRODUCT = {
     "author_last": "YOUR_LAST_NAME",
     "username": "YOUR_USERNAME",
     "password": "YOUR_PASSWORD",
-    "twitter": "https://twitter.com/YOUR_TWITTER_HANDLE",
-    "category_keywords": ["ai", "sales", "saas", "marketing", "automation", "lead generation", "open source"],
+    "twitter": "",
+    "category_keywords": ["ai", "finance", "trading", "daytrading", "fx", "forex", "economic calendar", "macro economics"],
     "logo_path": os.path.join(SCRIPT_DIR, "logo.png"),
     "screenshot_path": os.path.join(SCRIPT_DIR, "site-image.png"),
 }
@@ -248,7 +248,7 @@ async def submit_site(context, entry, seq_num, total, results):
                         if (el.tagName === 'SELECT') {
                             // Try to find best option
                             const options = [...el.options];
-                            const aiOpt = options.find(o => /ai|saas|software|tech|tool|marketing|sales|automation/i.test(o.text));
+                            const aiOpt = options.find(o => /ai|finance|trading|fintech|forex|economic|macro|saas|software|tech|tool|data|analytics/i.test(o.text));
                             if (aiOpt) {
                                 el.value = aiOpt.value;
                                 el.dispatchEvent(new Event('change', {bubbles: true}));
